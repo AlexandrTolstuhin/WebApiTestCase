@@ -5,7 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WebApiTestCase.Common\WebApiTestCase.Common.csproj" />
+    <ProjectReference Include="..\WebApiTestCase.Data\WebApiTestCase.Data.csproj" />
   </ItemGroup>
 
 </Project>
