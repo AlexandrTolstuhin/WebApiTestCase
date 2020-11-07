@@ -14,13 +14,13 @@ namespace WebApiTestCase.Data
     {
         public static async Task SeedDatabaseAsync(this ApplicationContext context)
         {
-            if (await context.Users.AnyAsync()) return;
+            if (await context.Users.AnyAsync().ConfigureAwait(false)) return;
 
-            var users = await SeedUsersAsync(context);
+            var users = await SeedUsersAsync(context).ConfigureAwait(false);
 
-            await SeedTasksAsync(context, users);
+            await SeedTasksAsync(context, users).ConfigureAwait(false);
 
-            await context.SaveChangesAsync();
+            await context.SaveChangesAsync().ConfigureAwait(false);
         }
 
         private static async Task<UserEntity[]> SeedUsersAsync(ApplicationContext context)
@@ -36,7 +36,7 @@ namespace WebApiTestCase.Data
                 })
                 .ToArray();
 
-            await context.Users.AddRangeAsync(users);
+            await context.Users.AddRangeAsync(users).ConfigureAwait(false);
 
             return users;
         }
@@ -60,7 +60,7 @@ namespace WebApiTestCase.Data
                 })
                 .ToArray();
 
-            await context.Tasks.AddRangeAsync(tasks);
+            await context.Tasks.AddRangeAsync(tasks).ConfigureAwait(false);
 
             return tasks;
         }
