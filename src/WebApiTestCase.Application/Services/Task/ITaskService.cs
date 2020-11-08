@@ -3,10 +3,12 @@ using WebApiTestCase.Application.Models;
 using WebApiTestCase.Application.Models.Task;
 using WebApiTestCase.Common.Collections;
 
-namespace WebApiTestCase.Application.Services
+namespace WebApiTestCase.Application.Services.Task
 {
     public interface ITaskService
     {
+        Task<int> CreateAsync(TaskCreateModel model);
+
         Task<IPagedList<TaskResponseModel>> GetUserProvidedTasksAsync(int userId, PagedModel paged);
 
         Task<IPagedList<TaskResponseModel>> GetUserPerformedTasksAsync(int userId, PagedModel paged);

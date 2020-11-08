@@ -8,10 +8,6 @@ namespace WebApiTestCase.Application.Models.Validators.Task
     {
         public TaskEditModelValidator()
         {
-            RuleFor(m => m.Id)
-                .GreaterThanOrEqualTo(TaskValidatorConfiguration.MinimumIdValue)
-                .WithMessage($"Идентификатор задачи должен быть больше либо равен {TaskValidatorConfiguration.MinimumIdValue}");
-
             RuleFor(m => m.PerformerId)
                 .GreaterThanOrEqualTo(UserValidatorConfiguration.MinimumIdValue)
                 .WithMessage($"Идентификатор пользователя-исполнителя должен быть больше либо равен {UserValidatorConfiguration.MinimumIdValue}");

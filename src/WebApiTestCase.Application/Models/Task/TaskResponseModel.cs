@@ -1,4 +1,6 @@
-﻿namespace WebApiTestCase.Application.Models.Task
+﻿using WebApiTestCase.Core.Enums;
+
+namespace WebApiTestCase.Application.Models.Task
 {
     public class TaskResponseModel
     {
@@ -8,7 +10,7 @@
 
         public string Description { get; set; }
 
-        public string Status { get; set; }
+        public TaskStatus Status { get; set; }
 
         public int ProviderId { get; set; }
 

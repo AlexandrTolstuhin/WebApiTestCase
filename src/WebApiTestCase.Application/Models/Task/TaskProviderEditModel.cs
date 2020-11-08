@@ -2,8 +2,6 @@
 {
     public class TaskProviderEditModel
     {
-        public int Id { get; set; }
-
         public int ProviderId { get; set; }
     }
 }

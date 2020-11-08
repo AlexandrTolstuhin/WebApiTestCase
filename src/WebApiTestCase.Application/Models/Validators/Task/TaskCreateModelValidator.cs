@@ -1,12 +1,12 @@
 ﻿using FluentValidation;
-using WebApiTestCase.Application.Models.User;
-using WebApiTestCase.Application.Models.Validators.Task;
+using WebApiTestCase.Application.Models.Task;
+using WebApiTestCase.Application.Models.Validators.User;
 
-namespace WebApiTestCase.Application.Models.Validators.User
+namespace WebApiTestCase.Application.Models.Validators.Task
 {
-    public class UserAssignTaskModelValidator : AbstractValidator<UserAssignTaskModel>
+    public class TaskCreateModelValidator : AbstractValidator<TaskCreateModel>
     {
-        public UserAssignTaskModelValidator()
+        public TaskCreateModelValidator()
         {
             RuleFor(m => m.ProviderId)
                 .GreaterThanOrEqualTo(UserValidatorConfiguration.MinimumIdValue)
@@ -16,7 +16,7 @@ namespace WebApiTestCase.Application.Models.Validators.User
                 .GreaterThanOrEqualTo(UserValidatorConfiguration.MinimumIdValue)
                 .WithMessage($"Идентификатор пользователя-исполнителя должен быть больше либо равен {UserValidatorConfiguration.MinimumIdValue}");
 
-            RuleFor(m => m.TaskName)
+            RuleFor(m => m.Name)
                 .MinimumLength(TaskValidatorConfiguration.MinimumNameLength)
                 .WithMessage($"Название задачи должно иметь минимум {TaskValidatorConfiguration.MinimumNameLength} символов");
         }

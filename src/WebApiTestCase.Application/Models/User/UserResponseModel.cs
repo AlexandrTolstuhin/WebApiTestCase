@@ -1,4 +1,6 @@
-﻿namespace WebApiTestCase.Application.Models.User
+﻿using WebApiTestCase.Core.Enums;
+
+namespace WebApiTestCase.Application.Models.User
 {
     public class UserResponseModel
     {
@@ -8,6 +10,6 @@
 
         public string LastName { get; set; }
 
-        public string Status { get; set; }
+        public UserStatus Status { get; set; }
     }
 }

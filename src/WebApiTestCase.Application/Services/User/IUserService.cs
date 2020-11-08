@@ -3,7 +3,7 @@ using WebApiTestCase.Application.Models;
 using WebApiTestCase.Application.Models.User;
 using WebApiTestCase.Common.Collections;
 
-namespace WebApiTestCase.Application.Services
+namespace WebApiTestCase.Application.Services.User
 {
     public interface IUserService
     {
@@ -12,7 +12,5 @@ namespace WebApiTestCase.Application.Services
         Task<UserResponseModel> GetByIdAsync(int id);
 
         Task<int> UpdateAsync(int id, UserEditModel model);
-
-        Task<int> AssignTaskAsync(UserAssignTaskModel model);
     }
 }

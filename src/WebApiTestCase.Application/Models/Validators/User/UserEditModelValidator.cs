@@ -7,10 +7,6 @@ namespace WebApiTestCase.Application.Models.Validators.User
     {
         public UserEditModelValidator()
         {
-            RuleFor(m => m.Id)
-                .GreaterThanOrEqualTo(UserValidatorConfiguration.MinimumIdValue)
-                .WithMessage($"Идентификатор пользователя должен быть больше либо равен {UserValidatorConfiguration.MinimumIdValue}");
-
             RuleFor(m => m.FirstName)
                 .MinimumLength(UserValidatorConfiguration.MinimumFirstNameLength)
                 .WithMessage($"Имя должно иметь минимум {UserValidatorConfiguration.MinimumFirstNameLength} символов");
