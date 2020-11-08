@@ -1,4 +1,3 @@
-using System.Text.Json.Serialization;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,6 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Text.Json.Serialization;
 using WebApiTestCase.Api.Filters;
 using WebApiTestCase.Api.Middleware;
 using WebApiTestCase.Application.Extensions;
@@ -29,8 +29,7 @@ namespace WebApiTestCase.Api
             services.AddDbContext<ApplicationContext>(
                 options =>
                 {
-                    options.UseSqlServer(Configuration.GetConnectionString("Default"), 
-                        b => b.MigrationsAssembly("WebApiTestCase.Data"));
+                    options.UseSqlServer(Configuration.GetConnectionString("Default"));
                 });
 
             services.AddApplicationServices();

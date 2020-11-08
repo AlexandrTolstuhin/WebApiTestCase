@@ -4,9 +4,7 @@ namespace WebApiTestCase.Application.Models
 {
     public class ApiResult<T>
     {
-        private ApiResult() { }
-
-        private ApiResult(bool succeeded, int code, T result, IEnumerable<string> errors) : base()
+        private ApiResult(bool succeeded, int code, T result, IEnumerable<string> errors)
         {
             Succeeded = succeeded;
             Code = code;

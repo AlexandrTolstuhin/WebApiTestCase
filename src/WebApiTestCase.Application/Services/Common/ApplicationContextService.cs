@@ -1,4 +1,5 @@
-﻿using WebApiTestCase.Application.Exceptions;
+﻿using System;
+using WebApiTestCase.Application.Exceptions;
 using WebApiTestCase.Data;
 
 namespace WebApiTestCase.Application.Services.Common
@@ -14,7 +15,15 @@ namespace WebApiTestCase.Application.Services.Common
 
         protected async System.Threading.Tasks.Task SaveChangesAsync()
         {
-            var result = await Context.SaveChangesAsync();
+            int result;
+            try
+            {
+                result = await Context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw new BadRequestException("Ошибка при попытке сохранения изменений в базу данных", e);
+            }
 
             if (result < 1)
                 throw new BadRequestException("Отсутствуют сохраненные изменения");
