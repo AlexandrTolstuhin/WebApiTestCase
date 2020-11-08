@@ -32,7 +32,7 @@ namespace WebApiTestCase.Data
                 {
                     FirstName = $"FirstName {i}",
                     LastName = $"LastName {i}",
-                    Status = UserStatus.Default
+                    Status = UserStatus.Active
                 })
                 .ToArray();
 
@@ -54,7 +54,7 @@ namespace WebApiTestCase.Data
                 {
                     Name = $"Task #{i}",
                     Description = $"Task #{i} description",
-                    Status = TaskStatus.Default,
+                    Status = TaskStatus.NotStarted,
                     Provider = random.NextItem(users),
                     Performer = random.NextItem(users)
                 })

@@ -27,7 +27,7 @@ namespace WebApiTestCase.Application.Mappers
                 Description = model.Description,
                 ProviderId = model.ProviderId,
                 PerformerId = model.PerformerId,
-                Status = TaskStatus.Default
+                Status = TaskStatus.NotStarted
             };
         }
     }

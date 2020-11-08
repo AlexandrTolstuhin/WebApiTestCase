@@ -4,6 +4,6 @@
     {
         public const int MinimumCurrentPage = 0;
 
-        public const int MinimumPageSize = 0;
+        public const int MinimumPageSize = 1;
     }
 }

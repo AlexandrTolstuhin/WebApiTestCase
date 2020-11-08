@@ -2,8 +2,7 @@
 {
     public enum TaskStatus
     {
-        Default = 0,
-        NotStarted = 0,
+        NotStarted,
         InProcess,
         Completed,
         Canceled,

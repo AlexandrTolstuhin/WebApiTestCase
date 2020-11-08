@@ -22,6 +22,8 @@ namespace WebApiTestCase.Application.Services.Task
         {
             var task = model.ToTaskEntity();
 
+            await Context.Tasks.AddAsync(task);
+
             await SaveChangesAsync();
 
             return task.Id;
