@@ -21,7 +21,7 @@ namespace WebApiTestCase.Application.Test.Services
         }
 
         [Test]
-        public async Task GetAllAsync_Should_Return_Empty_IPagedList_When_User_Is_Empty()
+        public async Task GetAllAsync_Should_Return_Empty_IPagedList_When_Users_Is_Empty()
         {
             var pagedList = await _userService.GetAllAsync(new PagedModel());
 
