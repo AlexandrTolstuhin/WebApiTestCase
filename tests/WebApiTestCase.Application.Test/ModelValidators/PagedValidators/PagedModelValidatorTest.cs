@@ -1,17 +1,18 @@
 ﻿using FluentValidation.TestHelper;
 using NUnit.Framework;
 using WebApiTestCase.Application.Models;
+using WebApiTestCase.Application.Models.Validators.Paged;
 
-namespace WebApiTestCase.Application.Test.ModelValidators.PagedModelValidator
+namespace WebApiTestCase.Application.Test.ModelValidators.PagedValidators
 {
     public class PagedModelValidatorTest
     {
-        private Models.Validators.Paged.PagedModelValidator _validator;
+        private PagedModelValidator _validator;
 
         [SetUp]
         public void Setup()
         {
-            _validator = new Models.Validators.Paged.PagedModelValidator();
+            _validator = new PagedModelValidator();
         }
 
         [Test]

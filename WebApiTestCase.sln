@@ -13,7 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTestCase.Application"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTestCase.Api", "src\WebApiTestCase.Api\WebApiTestCase.Api.csproj", "{6390D02D-5957-41DA-90FD-D43A0FAE0B52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTestCase.Application.Test", "src\WebApiTestCase.Application.Test\WebApiTestCase.Application.Test.csproj", "{30B95564-6BB0-4DC8-80C9-0F2F1CFA016B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTestCase.Application.Test", "tests\WebApiTestCase.Application.Test\WebApiTestCase.Application.Test.csproj", "{30B95564-6BB0-4DC8-80C9-0F2F1CFA016B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{012FAC30-D475-4EC4-99CF-0273C634C441}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4BDBC239-3171-4353-9B77-5054301F4647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F9E428E-E4FC-4709-8D1A-28FEA70DD34A} = {4BDBC239-3171-4353-9B77-5054301F4647}
+		{35B2D2D1-E5F3-447C-88A1-69137E7ECA81} = {4BDBC239-3171-4353-9B77-5054301F4647}
+		{AD802DCB-683B-47D4-8627-487158A906E6} = {4BDBC239-3171-4353-9B77-5054301F4647}
+		{0B3435C4-8C1F-4485-8818-4B1442125FB9} = {4BDBC239-3171-4353-9B77-5054301F4647}
+		{6390D02D-5957-41DA-90FD-D43A0FAE0B52} = {4BDBC239-3171-4353-9B77-5054301F4647}
+		{30B95564-6BB0-4DC8-80C9-0F2F1CFA016B} = {012FAC30-D475-4EC4-99CF-0273C634C441}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {68F8F2AB-6E5C-4644-A281-939894B580EA}
